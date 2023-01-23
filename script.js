@@ -8,6 +8,8 @@ const resetTimer = () => {
   min = 0;
   document.getElementById("mins").innerHTML = `0${min}`;
   document.getElementById("sec").innerHTML = `0${sec}`;
+  document.getElementById("startButton").innerHTML = "Start";
+  document.getElementById("startButton").style = "background-color: #198754";
 };
 
 const timer = () => {
@@ -25,5 +27,13 @@ const timer = () => {
 
 const start = () => {
   interVal = setInterval(timer, 1000);
+  document.getElementById("startButton").style = "display: none";
+  document.getElementById("stopButton").style = "display: inline";
 };
-const stopTimer = () => clearInterval(interVal);
+const stopTimer = () => {
+  clearInterval(interVal);
+  document.getElementById("startButton").innerHTML = "Resume";
+  document.getElementById("startButton").style = "display: inline";
+  document.getElementById("startButton").style = "background-color: #e6bb3c";
+  document.getElementById("stopButton").style = "display: none";
+};
