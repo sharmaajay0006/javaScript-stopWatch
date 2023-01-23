@@ -1,7 +1,9 @@
+//Declare three global variables
 var sec = 0;
 var min = 0;
 var interVal;
 
+//this function used for reset the timer.
 const resetTimer = () => {
   stopTimer();
   sec = 0;
@@ -11,7 +13,7 @@ const resetTimer = () => {
   document.getElementById("startButton").innerHTML = "Start";
   document.getElementById("startButton").style = "background-color: #198754";
 };
-
+// Timer functions used to increase the sec by 1 and update he element
 const timer = () => {
   sec += 1;
   document.getElementById("sec").innerHTML =
@@ -25,11 +27,15 @@ const timer = () => {
   document.getElementById("mins").innerHTML = min < 10 ? "0" + min : min;
 };
 
+//this function used for start the timer.
 const start = () => {
   interVal = setInterval(timer, 1000);
   document.getElementById("startButton").style = "display: none";
   document.getElementById("stopButton").style = "display: inline";
 };
+
+//this function used for stop the timer.
+//
 const stopTimer = () => {
   clearInterval(interVal);
   document.getElementById("startButton").innerHTML = "Resume";

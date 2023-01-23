@@ -8,6 +8,7 @@
 body {
   background-color: beige;
 }
+/*The card-header class styles the header of the card with a bottom border, a background color, and a color of red. It also sets the font weight and size to be bold and large respectively.*/
 .card-header {
   border-bottom: 2px solid #414141;
   background-color: hsla(149, 46%, 57%, 0.53);
@@ -15,31 +16,35 @@ body {
   font-weight: bold;
   font-size: x-large;
 }
-
+/* The wrapper class sets the display property to flex, aligns the items in the center and sets the height of the wrapper to be 100% of the viewport height.*/
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
+/*The .main class styles the main container of the card with a width, height, border, border-radius and margin properties.*/
 .main {
   width: 550px;
   height: 300px;
   border: 2px solid #414141;
   border-radius: 10px;
-  /* margin: 20px; */
 }
 
+/*The .counter class styles the counter with a margin-top property*/
 .counter {
   margin-top: 4px;
 }
 
+/*The .content class styles the content with a display property of flex, and aligns the items in the center, also set a margin-bottom property.*/
 .content {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: -50px;
 }
 
+/*The .timer class styles the timer with a height, width, color, border-radius, background-color, display, justify-content and align-items properties.*/
 .timer {
   height: 50px;
   width: 200px;
@@ -50,6 +55,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+/*The .btn class styles the button with a width property.*/
 .btn {
   width: 100px;
 }
